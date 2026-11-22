@@ -1,16 +1,51 @@
-# React + Vite
+# FocusBoard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, single-user task management dashboard built with React and Vite, featuring full CRUD operations, combined search and filtering, dynamic overview statistics, a three-slide Focus Notes carousel, and browser persistence via `localStorage`.
 
-Currently, two official plugins are available:
+## Links
+- **Live Hosted URL:** https://focusboard-steel.vercel.app
+- **GitHub Repository:** https://github.com/KonakanchiBrahmam/focusboard
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
+- React (Hooks)
+- Vite
+- JavaScript (ES6+)
+- CSS3 (Responsive Grid/Flexbox + Media Queries)
+- Lucide React (Icons)
 
-## React Compiler
+## Key Features
+- **Dynamic Statistics:** Real-time calculation of Total Tasks, In Progress, Completed, and Completion Percentage.
+- **Task CRUD:** Create, edit, and delete tasks (with confirmation dialog) using a single reusable modal form with validation.
+- **Quick Status Updates:** Inline status selector (`To do`, `In progress`, `Completed`) on every task card.
+- **Combined Search & Filtering:** Case-insensitive title search, status tabs (`All`, `To do`, `In progress`, `Completed`), and priority filter (`All`, `High`, `Medium`, `Low`).
+- **Focus Notes Carousel:** Three-slide carousel with Previous/Next buttons and clickable slide indicators.
+- **Browser Persistence:** Automatically saves and restores tasks in `localStorage` under the `focusboard_tasks` key.
+- **Responsive & Accessible:** Tested at `1440px`, `768px`, and `390px` with semantic HTML, labels, and keyboard focus indicators.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Structure
+```text
+focusboard/
+├── screenshots/
+│   ├── desktop.png
+│   └── mobile.png
+├── src/
+│   ├── components/
+│   │   ├── FilterTabs.jsx
+│   │   ├── FocusNotes.jsx
+│   │   ├── Header.jsx
+│   │   ├── SearchBar.jsx
+│   │   ├── Sidebar.jsx
+│   │   ├── StatCard.jsx
+│   │   ├── TaskCard.jsx
+│   │   ├── TaskForm.jsx
+│   │   └── TaskList.jsx
+│   ├── data/
+│   │   └── sampleTasks.js
+│   ├── hooks/
+│   │   └── useLocalStorage.js
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── AI_USAGE.md
+├── package.json
+└── README.md
